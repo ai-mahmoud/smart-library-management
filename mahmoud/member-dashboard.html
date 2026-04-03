@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-container" onload="loadMemberDashboard()">
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h3>Member Portal</h3>
+            <p id="welcome-msg" style="font-size: 0.9em; opacity: 0.8;"></p>
+        </div>
+        <div class="sidebar-nav">
+            <button class="nav-btn active">My Library</button>
+            <button class="nav-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h2>Available Books</h2>
+        <div class="section-box">
+            <table class="data-table">
+                <thead><tr><th>Title</th><th>Author</th><th>Action</th></tr></thead>
+                <tbody id="available-books-body"></tbody>
+            </table>
+        </div>
+
+        <h2 style="margin-top: 30px;">My Borrowed Books</h2>
+        <div class="section-box">
+            <table class="data-table">
+                <thead><tr><th>Title</th><th>Borrowed Date</th><th>Action</th></tr></thead>
+                <tbody id="my-books-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

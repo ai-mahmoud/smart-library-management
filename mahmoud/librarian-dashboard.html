@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Librarian Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-container" onload="loadLibrarianDashboard()">
+    <nav class="sidebar">
+        <div class="sidebar-header"><h3>Admin Portal</h3></div>
+        <div class="sidebar-nav">
+            <button class="nav-btn active">Dashboard</button>
+            <button class="nav-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h2>Book Management</h2>
+        <div class="section-box">
+            <form onsubmit="addBook(event)" style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="text" id="book-title" placeholder="Book Title" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                <input type="text" id="book-author" placeholder="Author" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                <button type="submit" class="btn btn-primary">Add Book</button>
+            </form>
+            <table class="data-table">
+                <thead><tr><th>ID</th><th>Title</th><th>Author</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody id="book-table-body"></tbody>
+            </table>
+        </div>
+
+        <div class="section-box" style="margin-top: 30px;">
+            <h3>Member Management</h3>
+            <form onsubmit="addMember(event)" style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="text" id="mem-name" placeholder="Member Name" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                <input type="password" id="mem-pass" placeholder="Password" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                <button type="submit" class="btn btn-secondary">Add Member</button>
+            </form>
+            <table class="data-table">
+                <thead><tr><th>ID</th><th>Name</th><th>Fines</th><th>Action</th></tr></thead>
+                <tbody id="member-table-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

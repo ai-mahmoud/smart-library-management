@@ -1,0 +1,3 @@
+/home/dr4who/Downloads/smart-library-management-system/backend/build/_deps/json-subbuild/CMakeFiles/json-populate.dir
+/home/dr4who/Downloads/smart-library-management-system/backend/build/_deps/json-subbuild/CMakeFiles/edit_cache.dir
+/home/dr4who/Downloads/smart-library-management-system/backend/build/_deps/json-subbuild/CMakeFiles/rebuild_cache.dir
